@@ -1,0 +1,13 @@
+# Rust build output
+/target/
+
+# Test output
+test.txt
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Symlinked reference project
+/tmp/

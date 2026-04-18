@@ -1,0 +1,30 @@
+[package]
+name = "whisper-notes"
+version = "1.0.0"
+edition = "2021"
+description = "Voice dictation CLI that appends to a file"
+authors = ["Mike Smullin <mike@smullindesign.com>"]
+license = "MIT"
+repository = "https://github.com/mikesmullin/whisper-notes"
+readme = "README.md"
+
+[dependencies]
+# X11 global hotkey support
+x11rb = { version = "0.13", features = ["allow-unsafe-code"] }
+
+# Audio playback
+rodio = "0.19"
+
+# JSON parsing
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Signal handling
+ctrlc = "3.4"
+
+# Regex for text processing
+regex = "1.10"
+
+[profile.release]
+lto = true
+strip = true
